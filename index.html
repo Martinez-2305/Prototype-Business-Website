@@ -287,8 +287,8 @@ nav {
 
 /* TESTIMONIALS */
 .testi-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:24px; margin-top:56px; }
-.tcard { position:relative; border-radius:16px; overflow:hidden; aspect-ratio:3/4; display:flex; flex-direction:column; justify-content:flex-end; transition:transform .3s; }
-.tcard:hover { transform:translateY(-4px); }
+.tcard { position:relative; border-radius:16px; overflow:hidden; aspect-ratio:3/4; display:flex; flex-direction:column; justify-content:flex-end; transition:transform .4s ease, box-shadow .4s ease; }
+.tcard:hover { transform:translateY(-8px) scale(1.02); box-shadow:0 20px 48px rgba(227,27,35,0.25), 0 0 0 1px rgba(227,27,35,0.3); }
 .tcard-bg { position:absolute; inset:0; }
 .tcard:nth-child(1) .tcard-bg { background:#ffffff; }
 .tcard:nth-child(1) .tcard-decor { background:rgba(245,245,245,0.1); border-color:rgba(245,245,245,0.2); }
@@ -296,17 +296,18 @@ nav {
 .tcard:nth-child(1) blockquote { color:#1a1a1a; }
 .tcard:nth-child(1) .tcard-name { color:#1a1a1a; }
 .tcard:nth-child(1) .tcard-role { color:#666; }
-.tcard:nth-child(2) .tcard-bg { background:linear-gradient(160deg,#1c1414,#2d1010,#1a0d0d); }
+.tcard:nth-child(2) .tcard-bg { background:linear-gradient(160deg,#0d1a14,#122018,#0d1a14); }
 .tcard:nth-child(3) .tcard-bg { background:linear-gradient(160deg,#0f1a18,#122820,#0f1a18); }
 .tcard.coming-soon { justify-content:center; align-items:center; }
 .tcard-coming { text-align:center; position:relative; z-index:2; }
 .tcard-coming-icon { font-size:2.8rem; margin-bottom:14px; opacity:0.35; }
 .tcard-coming-text { font-family:var(--serif); font-size:1.1rem; font-style:italic; color:rgba(255,255,255,0.45); letter-spacing:2px; }
 .modernus-logo { background:#ffffff; border-color:#ffffff; padding:8px 12px; display:inline-flex; align-items:center; }
+.cs-logo { background:#ffffff; border-color:#ffffff; padding:8px 12px; display:inline-flex; align-items:center; }
 .tcard-overlay { position:absolute; inset:0; background:linear-gradient(to top, rgba(0,0,0,0.92) 40%, transparent 100%); }
 .tcard-body { position:relative; z-index:2; padding:32px; }
 .tcard-logo { display:inline-block; background:rgba(255,255,255,0.1); border:1px solid rgba(255,255,255,0.15); border-radius:8px; padding:8px 14px; font-size:0.72rem; font-weight:700; color:rgba(255,255,255,0.6); letter-spacing:1px; margin-bottom:16px; text-transform:uppercase; }
-.tcard blockquote { font-family:var(--serif); font-size:1rem; font-weight:300; color:#fff; line-height:1.65; font-style:italic; margin-bottom:20px; }
+.tcard blockquote { font-family:var(--serif); font-size:1rem; font-weight:300; color:#fff; line-height:1.65; font-style:italic; margin-bottom:20px; display:-webkit-box; -webkit-line-clamp:5; -webkit-box-orient:vertical; overflow:hidden; min-height:calc(1rem * 1.65 * 5); }
 .tcard-name { font-size:0.85rem; font-weight:600; color:#fff; display:block; }
 .tcard-role { font-size:0.75rem; color:rgba(255,255,255,0.5); display:block; margin-top:2px; }
 .tcard-stars { color:var(--red); font-size:0.8rem; letter-spacing:2px; margin-bottom:12px; }
@@ -765,14 +766,20 @@ footer { background:#080101; color:rgba(255,255,255,0.5); padding:64px 48px 40px
           <span class="tcard-role">Director · Cheam, Surrey</span>
         </div>
       </a>
-      <div class="tcard coming-soon fade-up fade-up-d2">
+      <a class="tcard fade-up fade-up-d2" href="https://www.cs-cleaningservices.co.uk/" target="_blank" rel="noopener">
         <div class="tcard-bg"></div>
         <div class="tcard-overlay"></div>
-        <div class="tcard-coming">
-          <div class="tcard-coming-icon">⏳</div>
-          <div class="tcard-coming-text">Coming Soon</div>
+        <div class="tcard-top"><div class="tcard-decor">🧹</div></div>
+        <div class="tcard-body">
+          <div class="tcard-stars">★★★★★</div>
+          <div class="tcard-logo cs-logo">
+            <img src="C&S logo.jpeg" alt="C&S Cleaning Services" style="height:36px;display:block;border-radius:4px;">
+          </div>
+          <blockquote>"Before working with MartKam Digital we had no online presence at all. Now we have a professional website and customers are finding us on Google every week — it's made a real difference to the business."</blockquote>
+          <span class="tcard-name">Seliha</span>
+          <span class="tcard-role">Director · C&S Cleaning Services, Surrey</span>
         </div>
-      </div>
+      </a>
       <div class="tcard coming-soon fade-up fade-up-d3">
         <div class="tcard-bg"></div>
         <div class="tcard-overlay"></div>
