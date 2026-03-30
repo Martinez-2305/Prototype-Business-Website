@@ -191,10 +191,8 @@ nav {
 .mob-cta:hover { background:var(--red); }
 
 /* HERO */
-.hero { min-height:100vh; padding-top:68px; position:relative; overflow:hidden; display:flex; flex-direction:column; }
-.hero-slides { flex:1; position:relative; display:grid; grid-template-columns:1fr; }
-.hero-slide { grid-area:1/1; position:relative; opacity:0; transition:opacity 1s ease; min-height:calc(100vh - 68px); }
-.hero-slide.active { opacity:1; }
+.hero { min-height:100vh; padding-top:68px; position:relative; overflow:hidden; }
+.hero-slide { position:relative; min-height:calc(100vh - 68px); }
 .hero-slide-bg { position:absolute; inset:0; background-size:cover; background-position:center; }
 .hero-slide-bg::after { content:''; position:absolute; inset:0; background:linear-gradient(135deg, rgba(0,0,0,0.75) 0%, rgba(0,0,0,0.28) 100%); }
 .hero-slide-content {
@@ -212,9 +210,6 @@ nav {
 .btn-hero-primary:hover { background:var(--red-mid); transform:translateY(-1px); }
 .btn-hero-outline { background:rgba(255,255,255,0.12); border:1px solid rgba(255,255,255,0.35); color:#fff; font-size:0.9rem; font-weight:500; padding:14px 28px; border-radius:100px; backdrop-filter:blur(6px); transition:background .2s; }
 .btn-hero-outline:hover { background:rgba(255,255,255,0.2); }
-.hero-indicators { position:absolute; bottom:40px; right:80px; z-index:10; display:flex; gap:10px; align-items:center; }
-.hero-dot { width:28px; height:3px; border-radius:2px; background:rgba(255,255,255,0.3); cursor:pointer; transition:background .3s, width .3s; }
-.hero-dot.active { background:#fff; width:44px; }
 
 /* TICKER */
 .ticker { border-top:1px solid var(--border); border-bottom:1px solid var(--border); background:var(--white); overflow:hidden; padding:22px 0; }
@@ -468,14 +463,12 @@ footer { background:#080101; color:rgba(255,255,255,0.5); padding:64px 48px 40px
   .ham-btn { display:flex; } .mob-menu { display:flex; }
   .hero-slide { min-height:420px; }
   .hero-slide-bg { background-size:cover; background-position:center; }
-  #slide-1 .hero-slide-bg { background-image:url('https://images.unsplash.com/photo-1547658719-da2b51169166?ixlib=rb-1.2.1&q=80&w=1000') !important; }
   .hero-slide-bg::after { background:linear-gradient(160deg, rgba(0,0,0,0.72) 0%, rgba(0,0,0,0.38) 100%); }
   .hero-slide-content { min-height:420px; padding:20px 20px 44px; justify-content:center; }
   .hero-slide-content h1 { font-size:clamp(1.5rem, 5.5vw, 2.2rem); margin-bottom:8px; }
   .hero-slide-content p { font-size:0.85rem; margin-bottom:14px; line-height:1.55; }
   .hero-btns { flex-wrap:nowrap; gap:10px; }
   .btn-hero-primary, .btn-hero-outline { font-size:0.8rem; padding:11px 18px; }
-  .hero-indicators { bottom:10px; }
   .wrap { padding:0 24px; } .section { padding:72px 0; }
   .about-grid, .contact-inner { grid-template-columns:1fr; gap:48px; }
   .areas-grid { grid-template-columns:1fr; gap:24px; }
@@ -532,51 +525,15 @@ footer { background:#080101; color:rgba(255,255,255,0.5); padding:64px 48px 40px
 
 <!-- HERO -->
 <section class="hero">
-  <div class="hero-slides">
-
-    <div class="hero-slide active" id="slide-0">
-      <div class="hero-slide-bg" style="background-image:url('hero-slide.png')"></div>
-      <div class="hero-slide-content">
-        
-        <h1>Websites that bring<br><em>real customers to your door</em></h1>
-        <p>We build beautiful, conversion-focused websites for local businesses — designed to rank on Google and turn visitors into enquiries from day one.</p>
-        <div class="hero-btns">
-          <a href="#contact" class="btn-hero-primary">Get a Free Quote</a>
-          <a href="#services" class="btn-hero-outline">See What We Do</a>
-        </div>
+  <div class="hero-slide active">
+    <div class="hero-slide-bg" style="background-image:url('hero-slide.png')"></div>
+    <div class="hero-slide-content">
+      <h1>Websites that bring<br><em>real customers to your door</em></h1>
+      <p>We build beautiful, conversion-focused websites for local businesses — designed to rank on Google and turn visitors into enquiries from day one.</p>
+      <div class="hero-btns">
+        <a href="#contact" class="btn-hero-primary">Get a Free Quote</a>
+        <a href="#services" class="btn-hero-outline">See What We Do</a>
       </div>
-    </div>
-
-    <div class="hero-slide" id="slide-1">
-      <div class="hero-slide-bg" style="background-image:url('hero-slider-2.png')"></div>
-      <div class="hero-slide-content">
-        
-        <h1>Get found by customers<br><em>who are ready to buy</em></h1>
-        <p>From Google Business Profile setup to local SEO that gets you ranking — we make sure the right people find your business at exactly the right time.</p>
-        <div class="hero-btns">
-          <a href="#contact" class="btn-hero-primary">Boost Visibility</a>
-          <a href="#services" class="btn-hero-outline">Learn More</a>
-        </div>
-      </div>
-    </div>
-
-    <div class="hero-slide" id="slide-2">
-      <div class="hero-slide-bg" style="background-image:url('https://images.unsplash.com/photo-1556761175-b413da4baf72?w=1800&q=80')"></div>
-      <div class="hero-slide-content">
-        
-        <h1>Your local digital partner<br><em>in Surrey & South West London</em></h1>
-        <p>We're not a big agency. We're a local team who care about your results — affordable prices, plain English, and a website you'll actually be proud to share.</p>
-        <div class="hero-btns">
-          <a href="#contact" class="btn-hero-primary">Book a Free Chat</a>
-          <a href="#why" class="btn-hero-outline">Why MartKam?</a>
-        </div>
-      </div>
-    </div>
-
-    <div class="hero-indicators">
-      <div class="hero-dot active" onclick="goToSlide(0)"></div>
-      <div class="hero-dot" onclick="goToSlide(1)"></div>
-      <div class="hero-dot" onclick="goToSlide(2)"></div>
     </div>
   </div>
 </section>
@@ -1115,27 +1072,6 @@ footer { background:#080101; color:rgba(255,255,255,0.5); padding:64px 48px 40px
 </footer>
 
 <script>
-let current = 0;
-const slides = document.querySelectorAll('.hero-slide');
-const dots   = document.querySelectorAll('.hero-dot');
-let timer = setInterval(() => goToSlide((current + 1) % slides.length), 8500);
-function goToSlide(n) {
-  slides[current].classList.remove('active'); dots[current].classList.remove('active');
-  current = n;
-  slides[current].classList.add('active'); dots[current].classList.add('active');
-  clearInterval(timer);
-  timer = setInterval(() => goToSlide((current + 1) % slides.length), 8500);
-}
-(function() {
-  const heroSlides = document.querySelector('.hero-slides');
-  let touchStartX = 0;
-  heroSlides.addEventListener('touchstart', e => { touchStartX = e.changedTouches[0].clientX; }, { passive: true });
-  heroSlides.addEventListener('touchend', e => {
-    const delta = e.changedTouches[0].clientX - touchStartX;
-    if (Math.abs(delta) < 50) return;
-    goToSlide(delta < 0 ? (current + 1) % slides.length : (current - 1 + slides.length) % slides.length);
-  }, { passive: true });
-})();
 const observer = new IntersectionObserver((entries) => {
   entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
 }, { threshold: 0.1 });
