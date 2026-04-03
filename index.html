@@ -228,15 +228,16 @@ nav {
 .section-intro { font-size:1rem; color:var(--ink-light); max-width:580px; line-height:1.8; }
 
 /* ABOUT */
-.about-header { text-align:center; max-width:700px; margin:0 auto 72px; }
+.about-header { text-align:left; max-width:700px; margin:0 0 72px; }
 .about-label-wrap { display:inline-flex; align-items:center; gap:8px; margin-bottom:20px; }
 .about-label-icon { display:flex; gap:3px; align-items:center; }
 .about-label-icon span { width:10px; height:10px; border-radius:50%; background:var(--red); display:block; }
 .about-label-icon span:first-child { opacity:0.45; }
-.about-grid { display:grid; grid-template-columns:1fr 1fr; gap:64px; align-items:center; }
-.about-imgs { position:relative; display:flex; flex-direction:column; gap:32px; padding-right:32px; }
-.about-img { border-radius:16px; overflow:hidden; }
-.about-img img { width:100%; height:280px; object-fit:cover; display:block; filter:grayscale(15%); }
+.about-vid-section { position:relative; overflow:hidden; }
+.about-bg-video { position:absolute; top:-110px; left:50%; transform:translateX(-50%); width:100vw; height:calc(100% + 220px); object-fit:cover; z-index:-1; opacity:0.65; pointer-events:none; }
+.about-bg-overlay { position:absolute; inset:0; background:linear-gradient(90deg, rgba(13,1,1,0.75) 0%, rgba(13,1,1,0.2) 100%); z-index:1; }
+.about-vid-section .wrap { position:relative; }
+.about-grid { display:grid; grid-template-columns:1fr; gap:40px; align-items:center; max-width:720px; margin:0; }
 .about-badge { position:absolute; bottom:68px; right:8px; width:80px; height:80px; border-radius:50%; background:var(--red); border:3px solid var(--white); display:flex; flex-direction:column; align-items:center; justify-content:center; text-align:center; z-index:2; box-shadow:0 8px 24px rgba(0,0,0,0.3); }
 .about-badge-num { font-size:1.1rem; font-weight:700; color:#fff; line-height:1; }
 .about-badge-text { font-size:0.48rem; font-weight:700; color:rgba(255,255,255,0.75); letter-spacing:1px; text-transform:uppercase; margin-top:3px; }
@@ -292,13 +293,17 @@ nav {
 .tcard:nth-child(1) .tcard-name { color:#1a1a1a; }
 .tcard:nth-child(1) .tcard-role { color:#666; }
 .tcard:nth-child(2) .tcard-bg { background:linear-gradient(160deg,#0d1a14,#122018,#0d1a14); }
-.tcard:nth-child(3) .tcard-bg { background:linear-gradient(160deg,#0f1a18,#122820,#0f1a18); }
+.tcard:nth-child(3) .tcard-bg { background:linear-gradient(160deg,#0b1829,#0f2040,#0b1829); }
+.tcard:nth-child(3) .tcard-decor { background:rgba(184,50,50,0.2); border-color:rgba(184,50,50,0.4); }
+.tcard:nth-child(3) .tcard-stars { color:#b83232; }
+.tcard:nth-child(3) .tcard-overlay { background:linear-gradient(to top, rgba(11,24,41,0.96) 40%, transparent 100%); }
 .tcard.coming-soon { justify-content:center; align-items:center; }
 .tcard-coming { text-align:center; position:relative; z-index:2; }
 .tcard-coming-icon { font-size:2.8rem; margin-bottom:14px; opacity:0.35; }
 .tcard-coming-text { font-family:var(--serif); font-size:1.1rem; font-style:italic; color:rgba(255,255,255,0.45); letter-spacing:2px; }
 .modernus-logo { background:#ffffff; border-color:#ffffff; padding:8px 12px; display:inline-flex; align-items:center; }
 .cs-logo { background:#ffffff; border-color:#ffffff; padding:8px 12px; display:inline-flex; align-items:center; }
+.stpauls-logo { background:#ffffff; border-color:rgba(184,50,50,0.3); padding:8px 12px; display:inline-flex; align-items:center; }
 .tcard-overlay { position:absolute; inset:0; background:linear-gradient(to top, rgba(0,0,0,0.92) 40%, transparent 100%); }
 .tcard-body { position:relative; z-index:2; padding:32px; }
 .tcard-logo { display:inline-block; background:rgba(255,255,255,0.1); border:1px solid rgba(255,255,255,0.15); border-radius:8px; padding:8px 14px; font-size:0.72rem; font-weight:700; color:rgba(255,255,255,0.6); letter-spacing:1px; margin-bottom:16px; text-transform:uppercase; }
@@ -461,18 +466,12 @@ footer { background:#080101; color:rgba(255,255,255,0.5); padding:64px 48px 40px
 @media(max-width:980px){
   nav { padding:0 20px; } .tubelight-nav { display:none; } .nav-cta { display:none; }
   .ham-btn { display:flex; } .mob-menu { display:flex; }
-  .hero-slide { min-height:420px; }
-  .hero-slide-bg { background-size:cover; background-position:center; }
-  .hero-slide-bg::after { background:linear-gradient(160deg, rgba(0,0,0,0.72) 0%, rgba(0,0,0,0.38) 100%); }
-  .hero-slide-content { min-height:420px; padding:20px 20px 44px; justify-content:center; }
-  .hero-slide-content h1 { font-size:clamp(1.5rem, 5.5vw, 2.2rem); margin-bottom:8px; }
-  .hero-slide-content p { font-size:0.85rem; margin-bottom:14px; line-height:1.55; }
-  .hero-btns { flex-wrap:nowrap; gap:10px; }
-  .btn-hero-primary, .btn-hero-outline { font-size:0.8rem; padding:11px 18px; }
   .wrap { padding:0 24px; } .section { padding:72px 0; }
   .about-grid, .contact-inner { grid-template-columns:1fr; gap:48px; }
   .areas-grid { grid-template-columns:1fr; gap:24px; }
   .about-imgs { padding-right:0; }
+  .about-bg-video { position:relative; top:auto; left:auto; transform:none; width:100%; height:auto; object-fit:contain; opacity:1; margin:24px 0; }
+  .about-bg-overlay { display:none; }
   .why-cards { grid-template-columns:1fr; }
   .srv-primary, .srv-secondary { grid-template-columns:1fr; }
   .testi-grid { grid-template-columns:1fr; }
@@ -485,6 +484,38 @@ footer { background:#080101; color:rgba(255,255,255,0.5); padding:64px 48px 40px
   .footer-bottom { flex-direction:column; align-items:flex-start; }
   .form-row { grid-template-columns:1fr; }
 }
+
+/* ===== FAQ ===== */
+.faq { background:#080101; padding:110px 0; border-top:1px solid var(--border); border-bottom:1px solid var(--border); }
+.faq .wrap { padding-left:80px; padding-right:80px; }
+.faq-layout { display:grid; grid-template-columns:1fr 1.9fr; gap:80px; align-items:start; }
+.faq-left { position:sticky; top:100px; }
+.faq-eyebrow { display:inline-flex; align-items:center; gap:10px; font-size:0.72rem; font-weight:600; letter-spacing:2px; text-transform:uppercase; color:var(--red); margin-bottom:20px; }
+.faq-eyebrow::before { content:''; display:inline-block; width:20px; height:2px; background:var(--red); flex-shrink:0; }
+.faq-title { font-family:var(--serif); font-size:clamp(2rem,3.5vw,3.2rem); font-weight:400; line-height:1.15; letter-spacing:-0.3px; color:#fff; margin-bottom:18px; }
+.faq-title em { font-style:italic; color:rgba(255,255,255,0.35); }
+.faq-subtitle { font-size:0.88rem; line-height:1.8; color:var(--ink-light); margin-bottom:32px; }
+.faq-contact-cta { display:inline-flex; align-items:center; gap:8px; font-size:0.82rem; font-weight:600; color:var(--ink); background:rgba(227,27,35,0.1); border:1px solid rgba(227,27,35,0.22); padding:11px 22px; border-radius:100px; transition:background .2s, border-color .2s, color .2s; }
+.faq-contact-cta:hover { background:var(--red); border-color:var(--red); color:#fff; }
+.faq-list { display:flex; flex-direction:column; }
+.faq-item { border-bottom:1px solid var(--border); }
+.faq-item:first-child { border-top:1px solid var(--border); }
+.faq-btn { width:100%; display:flex; align-items:center; justify-content:space-between; gap:20px; padding:22px 0; background:none; border:none; cursor:pointer; text-align:left; color:var(--ink); transition:color .2s; }
+.faq-btn:hover { color:#fff; }
+.faq-btn.open { color:var(--red); }
+.faq-question { font-family:var(--serif); font-size:1.05rem; font-weight:400; line-height:1.35; letter-spacing:-0.1px; }
+.faq-icon { flex-shrink:0; width:28px; height:28px; border-radius:50%; border:1px solid var(--border); display:flex; align-items:center; justify-content:center; transition:background .25s, border-color .25s, transform .4s cubic-bezier(.34,1.56,.64,1); }
+.faq-btn.open .faq-icon { background:var(--red); border-color:var(--red); transform:rotate(45deg); }
+.faq-icon svg { width:12px; height:12px; color:var(--ink-light); transition:color .25s; }
+.faq-btn.open .faq-icon svg { color:#fff; }
+.faq-body { display:grid; grid-template-rows:0fr; transition:grid-template-rows .38s ease; }
+.faq-body.open { grid-template-rows:1fr; }
+.faq-body-inner { overflow:hidden; }
+.faq-answer { font-size:0.88rem; line-height:1.85; color:var(--ink-light); padding-bottom:22px; max-width:580px; }
+.faq-answer a { color:var(--red); text-decoration:none; border-bottom:1px solid rgba(227,27,35,0.3); transition:border-color .2s; }
+.faq-answer a:hover { border-color:var(--red); }
+@media (max-width:900px) { .faq-layout { grid-template-columns:1fr; gap:40px; } .faq-left { position:static; } }
+@media (max-width:768px) { .faq { padding:72px 0; } .faq .wrap { padding-left:24px; padding-right:24px; } .faq-question { font-size:0.95rem; } }
 </style>
 </head>
 <body>
@@ -496,9 +527,9 @@ footer { background:#080101; color:rgba(255,255,255,0.5); padding:64px 48px 40px
     <div class="tl-bg-pill" id="tlBg"></div>
     <div class="tl-lamp-wrap" id="tlLamp"><div class="tl-lamp-bar"><div class="tl-lamp-glow3"></div></div></div>
     <a href="#" class="tl-item active" data-section="home">Home</a>
-    <a href="#about" class="tl-item" data-section="about">About Us</a>
-    <a href="#services" class="tl-item" data-section="services">Services</a>
-    <a href="#testimonials" class="tl-item" data-section="testimonials">Reviews</a>
+    <a href="about.html" class="tl-item" data-section="about">About Us</a>
+    <a href="services.html" class="tl-item" data-section="services">Services</a>
+    <a href="reviews.html" class="tl-item" data-section="reviews">Reviews</a>
     <a href="#why" class="tl-item" data-section="why">Why Us</a>
     <a href="#process" class="tl-item" data-section="process">Our Process</a>
     <a href="#contact" class="tl-item" data-section="contact">Contact</a>
@@ -513,9 +544,9 @@ footer { background:#080101; color:rgba(255,255,255,0.5); padding:64px 48px 40px
 <div class="mob-menu" id="mobMenu">
   <div class="mob-menu-inner">
     <a href="#" class="mob-item">Home</a>
-    <a href="#about" class="mob-item">About Us</a>
-    <a href="#services" class="mob-item">Services</a>
-    <a href="#testimonials" class="mob-item">Reviews</a>
+    <a href="about.html" class="mob-item">About Us</a>
+    <a href="services.html" class="mob-item">Services</a>
+    <a href="reviews.html" class="mob-item">Reviews</a>
     <a href="#why" class="mob-item">Why Us</a>
     <a href="#process" class="mob-item">Our Process</a>
     <a href="#contact" class="mob-item">Contact</a>
@@ -532,7 +563,7 @@ footer { background:#080101; color:rgba(255,255,255,0.5); padding:64px 48px 40px
       <p>We build beautiful, conversion-focused websites for local businesses — designed to rank on Google and turn visitors into enquiries from day one.</p>
       <div class="hero-btns">
         <a href="#contact" class="btn-hero-primary">Get a Free Quote</a>
-        <a href="#services" class="btn-hero-outline">See What We Do</a>
+        <a href="services.html" class="btn-hero-outline">See What We Do</a>
       </div>
     </div>
   </div>
@@ -565,7 +596,8 @@ footer { background:#080101; color:rgba(255,255,255,0.5); padding:64px 48px 40px
 </div>
 
 <!-- INTRO -->
-<section class="section" id="about">
+<section class="section about-vid-section" id="about">
+  <div class="about-bg-overlay"></div>
   <div class="wrap">
     <div class="about-header fade-up">
       <div class="about-label-wrap">
@@ -574,15 +606,8 @@ footer { background:#080101; color:rgba(255,255,255,0.5); padding:64px 48px 40px
       </div>
       <h2 class="section-title">Your local web design partner — <em>no agency fluff</em></h2>
     </div>
+    <video id="logo-anim-bg" src="Logo animation1.mp4" muted playsinline loop preload="none" class="about-bg-video"></video>
     <div class="about-grid">
-      <div class="about-imgs fade-up">
-        <div class="about-img">
-          <img src="about-image.jpg" alt="MartKam team at work">
-        </div>
-        <div class="about-img">
-          <img src="about-image-2.jpg" alt="Supporting local businesses">
-        </div>
-      </div>
       <div class="about-right fade-up fade-up-d2">
         <p>We help local businesses across Surrey and South West London get online properly — with websites that look professional, load fast, and are built to bring in real enquiries from Google.</p>
         <p>Too many small businesses have websites that were expensive, took ages to build, and still don't bring in any customers. We do things differently: clear pricing, fast turnaround, and results you can measure.</p>
@@ -609,7 +634,10 @@ footer { background:#080101; color:rgba(255,255,255,0.5); padding:64px 48px 40px
             <div class="about-bar-track"><div class="about-bar-fill" data-w="100"></div></div>
           </div>
         </div>
-        <a href="#contact" class="about-cta">Book a free consultation →</a>
+        <div style="display:flex;gap:16px;align-items:center;flex-wrap:wrap;">
+          <a href="about.html" class="about-cta">Learn More →</a>
+          <a href="#contact" class="about-cta" style="background:transparent;border:1px solid rgba(255,255,255,0.25);color:rgba(255,255,255,0.8);">Book a free consultation →</a>
+        </div>
       </div>
     </div>
   </div>
@@ -621,6 +649,7 @@ footer { background:#080101; color:rgba(255,255,255,0.5); padding:64px 48px 40px
     <div class="services-header fade-up">
       <span class="label">What We Do</span>
       <h2 class="section-title">Web design & digital services<br><em>that get real results</em></h2>
+      <a href="services.html" class="btn-outline" style="display:inline-flex;align-items:center;gap:8px;margin-top:24px;font-size:0.88rem;font-weight:600;color:var(--ink);padding:12px 26px;border-radius:100px;border:1px solid var(--border);transition:border-color .2s,color .2s;">View All Services →</a>
     </div>
 
     <!-- Core services -->
@@ -737,17 +766,23 @@ footer { background:#080101; color:rgba(255,255,255,0.5); padding:64px 48px 40px
           <span class="tcard-role">Director · C&S Cleaning Services, Surrey</span>
         </div>
       </a>
-      <div class="tcard coming-soon fade-up fade-up-d3">
+      <a class="tcard fade-up fade-up-d3" href="https://martinez-2305.github.io/St-Paul-s-Cleaning-Services-/" target="_blank" rel="noopener">
         <div class="tcard-bg"></div>
         <div class="tcard-overlay"></div>
-        <div class="tcard-coming">
-          <div class="tcard-coming-icon">⏳</div>
-          <div class="tcard-coming-text">Coming Soon</div>
+        <div class="tcard-top"><div class="tcard-decor">🧼</div></div>
+        <div class="tcard-body">
+          <div class="tcard-stars">★★★★★</div>
+          <div class="tcard-logo stpauls-logo">
+            <img src="StPauls-logo.png" alt="St Paul's Cleaning Services" style="height:36px;display:block;border-radius:4px;">
+          </div>
+          <blockquote>"MartKam Digital completely transformed our online presence. Our website looks professional and we're now showing up on Google when local customers search for cleaning services — the difference has been remarkable."</blockquote>
+          <span class="tcard-name">Andreza</span>
+          <span class="tcard-role">Director · St Paul's Cleaning Services, Surrey</span>
         </div>
-      </div>
+      </a>
     </div>
     <div style="text-align:right;margin-top:32px;">
-      <a href="#contact" style="font-size:0.88rem;font-weight:600;color:var(--ink-light);border-bottom:1.5px solid var(--border);padding-bottom:2px;">View all reviews →</a>
+      <a href="reviews.html" style="font-size:0.88rem;font-weight:600;color:var(--ink-light);border-bottom:1.5px solid var(--border);padding-bottom:2px;">View all reviews →</a>
     </div>
   </div>
 </section>
@@ -892,7 +927,7 @@ footer { background:#080101; color:rgba(255,255,255,0.5); padding:64px 48px 40px
         <span>From first conversation to launch day — and long after.</span>
       </div>
       <div class="process-banner-btns">
-        <a href="#services" class="pbtn-ghost">View Services</a>
+        <a href="services.html" class="pbtn-ghost">View Services</a>
         <a href="#contact" class="pbtn-solid">Book a Free Chat</a>
       </div>
     </div>
@@ -1043,11 +1078,11 @@ footer { background:#080101; color:rgba(255,255,255,0.5); padding:64px 48px 40px
     <div class="footer-col">
       <h4>Services</h4>
       <ul>
-        <li><a href="#services">Website Design & Build</a></li>
-        <li><a href="#services">SEO & Google Rankings</a></li>
-        <li><a href="#services">Google Business Profile</a></li>
-        <li><a href="#services">IT Troubleshooting</a></li>
-        <li><a href="#services">Backups & Data Recovery</a></li>
+        <li><a href="services.html">Website Design & Build</a></li>
+        <li><a href="services.html">SEO & Google Rankings</a></li>
+        <li><a href="services.html">Google Business Profile</a></li>
+        <li><a href="services.html">IT Troubleshooting</a></li>
+        <li><a href="services.html">Backups & Data Recovery</a></li>
       </ul>
     </div>
     <div class="footer-col">
@@ -1096,6 +1131,17 @@ const barObserver = new IntersectionObserver((entries) => {
 }, { threshold: 0.3 });
 const barsEl = document.querySelector('.about-bars');
 if (barsEl) barObserver.observe(barsEl);
+
+const logoVid = document.getElementById('logo-anim-bg');
+if (logoVid) {
+  const vidObserver = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) { logoVid.currentTime = 0; logoVid.play(); }
+      else { logoVid.pause(); }
+    });
+  }, { threshold: 0.2 });
+  vidObserver.observe(logoVid);
+}
 
 // HAMBURGER MENU
 (function() {
