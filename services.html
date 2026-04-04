@@ -1022,6 +1022,38 @@ footer { background:#080101; color:rgba(255,255,255,0.5); padding:64px 48px 40px
   .footer-bottom { flex-direction:column; align-items:flex-start; gap:16px; }
   .footer-bottom-links { flex-wrap:wrap; gap:16px; }
 }
+
+/* ===== FAQ ===== */
+.faq { background:#080101; padding:110px 0; border-top:1px solid var(--border); border-bottom:1px solid var(--border); }
+.faq .wrap { padding-left:80px; padding-right:80px; }
+.faq-layout { display:grid; grid-template-columns:1fr 1.9fr; gap:80px; align-items:start; }
+.faq-left { position:sticky; top:100px; }
+.faq-eyebrow { display:inline-flex; align-items:center; gap:10px; font-size:0.72rem; font-weight:600; letter-spacing:2px; text-transform:uppercase; color:var(--red); margin-bottom:20px; }
+.faq-eyebrow::before { content:''; display:inline-block; width:20px; height:2px; background:var(--red); flex-shrink:0; }
+.faq-title { font-family:var(--serif); font-size:clamp(2rem,3.5vw,3.2rem); font-weight:400; line-height:1.15; letter-spacing:-0.3px; color:#fff; margin-bottom:18px; }
+.faq-title em { font-style:italic; color:rgba(255,255,255,0.35); }
+.faq-subtitle { font-size:0.88rem; line-height:1.8; color:var(--ink-light); margin-bottom:32px; }
+.faq-contact-cta { display:inline-flex; align-items:center; gap:8px; font-size:0.82rem; font-weight:600; color:var(--ink); background:rgba(227,27,35,0.1); border:1px solid rgba(227,27,35,0.22); padding:11px 22px; border-radius:100px; transition:background .2s, border-color .2s, color .2s; }
+.faq-contact-cta:hover { background:var(--red); border-color:var(--red); color:#fff; }
+.faq-list { display:flex; flex-direction:column; }
+.faq-item { border-bottom:1px solid var(--border); }
+.faq-item:first-child { border-top:1px solid var(--border); }
+.faq-btn { width:100%; display:flex; align-items:center; justify-content:space-between; gap:20px; padding:22px 0; background:none; border:none; cursor:pointer; text-align:left; color:var(--ink); transition:color .2s; }
+.faq-btn:hover { color:#fff; }
+.faq-btn.open { color:var(--red); }
+.faq-question { font-family:var(--serif); font-size:1.05rem; font-weight:400; line-height:1.35; letter-spacing:-0.1px; }
+.faq-icon { flex-shrink:0; width:28px; height:28px; border-radius:50%; border:1px solid var(--border); display:flex; align-items:center; justify-content:center; transition:background .25s, border-color .25s, transform .4s cubic-bezier(.34,1.56,.64,1); }
+.faq-btn.open .faq-icon { background:var(--red); border-color:var(--red); transform:rotate(45deg); }
+.faq-icon svg { width:12px; height:12px; color:var(--ink-light); transition:color .25s; }
+.faq-btn.open .faq-icon svg { color:#fff; }
+.faq-body { display:grid; grid-template-rows:0fr; transition:grid-template-rows .38s ease; }
+.faq-body.open { grid-template-rows:1fr; }
+.faq-body-inner { overflow:hidden; }
+.faq-answer { font-size:0.88rem; line-height:1.85; color:var(--ink-light); padding-bottom:22px; max-width:580px; }
+.faq-answer a { color:var(--red); text-decoration:none; border-bottom:1px solid rgba(227,27,35,0.3); transition:border-color .2s; }
+.faq-answer a:hover { border-color:var(--red); }
+@media (max-width:900px) { .faq-layout { grid-template-columns:1fr; gap:40px; } .faq-left { position:static; } }
+@media (max-width:768px) { .faq { padding:72px 0; } .faq .wrap { padding-left:24px; padding-right:24px; } .faq-question { font-size:0.95rem; } }
 </style>
 </head>
 <body>
@@ -1416,6 +1448,119 @@ footer { background:#080101; color:rgba(255,255,255,0.5); padding:64px 48px 40px
   </div>
 </section>
 
+<!-- FAQ -->
+<section class="faq" id="faq">
+  <div class="wrap">
+    <div class="faq-layout">
+      <div class="faq-left fade-up">
+        <span class="faq-eyebrow">FAQ</span>
+        <h2 class="faq-title">Questions we<br><em>get asked a lot</em></h2>
+        <p class="faq-subtitle">Can't find what you're looking for? Drop us a message — we'll get back to you the same day.</p>
+        <a href="index.html#contact" class="faq-contact-cta">Ask us anything →</a>
+      </div>
+      <div class="faq-list fade-up fade-up-d2">
+
+        <div class="faq-item">
+          <button class="faq-btn" aria-expanded="false">
+            <span class="faq-question">How much does a website cost?</span>
+            <span class="faq-icon"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><line x1="6" y1="1" x2="6" y2="11"/><line x1="1" y1="6" x2="11" y2="6"/></svg></span>
+          </button>
+          <div class="faq-body">
+            <div class="faq-body-inner">
+              <p class="faq-answer">Our website packages are priced clearly and transparently — you'll know the full cost before we start. Pricing depends on the size and features of your site, but every package includes design, development, mobile optimisation, and initial SEO setup. <a href="index.html#contact">Request a free quote</a> and we'll give you an exact figure, no obligation.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-btn" aria-expanded="false">
+            <span class="faq-question">How long does it take to build a website?</span>
+            <span class="faq-icon"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><line x1="6" y1="1" x2="6" y2="11"/><line x1="1" y1="6" x2="11" y2="6"/></svg></span>
+          </button>
+          <div class="faq-body">
+            <div class="faq-body-inner">
+              <p class="faq-answer">Most websites are designed, built, and launched within 2–4 weeks of our first consultation. More complex projects may take a little longer, but we'll always give you a clear timeline upfront. We keep things moving — your time matters too.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-btn" aria-expanded="false">
+            <span class="faq-question">Do I need to pay for hosting and a domain name separately?</span>
+            <span class="faq-icon"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><line x1="6" y1="1" x2="6" y2="11"/><line x1="1" y1="6" x2="11" y2="6"/></svg></span>
+          </button>
+          <div class="faq-body">
+            <div class="faq-body-inner">
+              <p class="faq-answer">We offer managed hosting and domain setup as part of our packages — so everything can be handled in one place. If you already have your own hosting or domain provider, that's no problem at all. We're happy to work with whatever you have in place.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-btn" aria-expanded="false">
+            <span class="faq-question">Will my website work on mobile phones and tablets?</span>
+            <span class="faq-icon"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><line x1="6" y1="1" x2="6" y2="11"/><line x1="1" y1="6" x2="11" y2="6"/></svg></span>
+          </button>
+          <div class="faq-body">
+            <div class="faq-body-inner">
+              <p class="faq-answer">Absolutely — every website we build is designed mobile-first. Over 60% of web traffic now comes from phones, so we make sure your site looks and works perfectly on every screen size, from smartphones to large desktop monitors.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-btn" aria-expanded="false">
+            <span class="faq-question">Can you help my business rank on Google?</span>
+            <span class="faq-icon"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><line x1="6" y1="1" x2="6" y2="11"/><line x1="1" y1="6" x2="11" y2="6"/></svg></span>
+          </button>
+          <div class="faq-body">
+            <div class="faq-body-inner">
+              <p class="faq-answer">Yes. SEO is built into every website we create — from page structure and load speed to keyword-optimised copy. We also offer local SEO and Google Business Profile setup to help you appear in local search results and Google Maps for customers in Surrey and South West London.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-btn" aria-expanded="false">
+            <span class="faq-question">Do I need any technical knowledge to manage my website?</span>
+            <span class="faq-icon"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><line x1="6" y1="1" x2="6" y2="11"/><line x1="1" y1="6" x2="11" y2="6"/></svg></span>
+          </button>
+          <div class="faq-body">
+            <div class="faq-body-inner">
+              <p class="faq-answer">Not at all. We build websites that are easy to manage, and we include a full handover and training session so you feel confident making basic updates yourself. If you'd rather leave the upkeep to us, we offer affordable ongoing support packages too.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-btn" aria-expanded="false">
+            <span class="faq-question">What areas do you cover?</span>
+            <span class="faq-icon"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><line x1="6" y1="1" x2="6" y2="11"/><line x1="1" y1="6" x2="11" y2="6"/></svg></span>
+          </button>
+          <div class="faq-body">
+            <div class="faq-body-inner">
+              <p class="faq-answer">We're based in Surrey and primarily serve small businesses across Surrey and South West London — including Woking, Guildford, Wimbledon, Kingston, Richmond, Sutton and surrounding areas. We also work remotely with businesses anywhere in the UK. <a href="index.html#contact">Get in touch</a> and we'll let you know how we can help.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-btn" aria-expanded="false">
+            <span class="faq-question">What happens after my website goes live?</span>
+            <span class="faq-icon"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><line x1="6" y1="1" x2="6" y2="11"/><line x1="1" y1="6" x2="11" y2="6"/></svg></span>
+          </button>
+          <div class="faq-body">
+            <div class="faq-body-inner">
+              <p class="faq-answer">We don't disappear after launch. We make sure your Google Business Profile is set up, your analytics are tracking properly, and everything is performing as expected. Ongoing support, content updates, and SEO monitoring are all available — just ask.</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- ===== CTA BANNER ===== -->
 <section class="cta-banner">
   <div class="cta-banner-orb1" aria-hidden="true"></div>
@@ -1520,6 +1665,25 @@ const observer = new IntersectionObserver((entries) => {
   });
 }, { threshold: 0.1 });
 document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+
+// FAQ ACCORDION
+document.querySelectorAll('.faq-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const item = btn.closest('.faq-item');
+    const body = item.querySelector('.faq-body');
+    const isOpen = btn.classList.contains('open');
+    document.querySelectorAll('.faq-btn.open').forEach(b => {
+      b.classList.remove('open');
+      b.setAttribute('aria-expanded', 'false');
+      b.closest('.faq-item').querySelector('.faq-body').classList.remove('open');
+    });
+    if (!isOpen) {
+      btn.classList.add('open');
+      btn.setAttribute('aria-expanded', 'true');
+      body.classList.add('open');
+    }
+  });
+});
 </script>
 </body>
 </html>
