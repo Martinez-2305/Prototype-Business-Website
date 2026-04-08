@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/png" href="logo.png">
+<link rel="apple-touch-icon" href="logo.png">
+
+<title>Web Design Epsom | MartKam Digital — Local Websites & SEO for Epsom Businesses</title>
+<meta name="description" content="MartKam Digital builds fast, mobile-friendly websites for businesses in Epsom, Surrey. Local SEO, Google Business Profile setup and custom web design that ranks. Free consultation — no obligation.">
+<meta name="keywords" content="web design Epsom, website design Epsom, local SEO Epsom, web design Epsom Surrey, small business website Epsom, Google Business Profile Epsom, web designer Epsom, affordable web design Epsom, web design near me Epsom, Epsom web developer">
+<meta name="robots" content="index, follow">
+<meta name="geo.region" content="GB-SRY">
+<meta name="geo.placename" content="Epsom, Surrey">
+<link rel="canonical" href="https://www.martkamdigital.com/web-design-epsom.html">
+
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.martkamdigital.com/web-design-epsom.html">
+<meta property="og:title" content="Web Design Epsom | MartKam Digital">
+<meta property="og:description" content="Custom websites and local SEO for businesses in Epsom, Surrey. Ranked websites, real enquiries — free consultation available.">
+<meta property="og:image" content="https://www.martkamdigital.com/hero-slide.png">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "name": "MartKam Digital",
+  "description": "Web design and local SEO services for small businesses in Epsom, Surrey.",
+  "url": "https://www.martkamdigital.com/web-design-epsom.html",
+  "telephone": "+447456848388",
+  "email": "martkamdigital@gmail.com",
+  "areaServed": { "@type": "Place", "name": "Epsom, Surrey" },
+  "address": { "@type": "PostalAddress", "addressRegion": "Surrey", "addressCountry": "GB" }
+}
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,700;1,9..144,300;1,9..144,400;1,9..144,700&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300;1,9..40,400&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --red:#E31B23; --red-mid:#c0161d; --red-dark:#8a0f14;
+  --ink:#f5eaea; --ink-light:#c4a8a8;
+  --mist:#180404; --white:#0d0101; --border:#3a0808;
+  --serif:'Fraunces',Georgia,serif; --sans:'DM Sans',system-ui,sans-serif;
+}
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;font-size:16px;}
+body{font-family:var(--sans);background:var(--white);color:var(--ink);overflow-x:hidden;line-height:1.65;-webkit-font-smoothing:antialiased;}
+a{text-decoration:none;color:inherit;}
+ul{list-style:none;}
+img{display:block;}
+
+/* NAV */
+nav{position:fixed;top:0;left:0;right:0;z-index:200;background:rgba(13,1,1,0.95);backdrop-filter:blur(16px);border-bottom:1px solid var(--border);padding:0 48px;height:68px;display:flex;align-items:center;justify-content:space-between;overflow:hidden;}
+.nav-logo img{height:148px;clip-path:inset(6px);}
+.nav-cta{background:var(--ink);color:var(--white);font-size:0.82rem;font-weight:600;padding:10px 22px;border-radius:100px;transition:background .2s;}
+.nav-cta:hover{background:var(--red);color:#fff;}
+.tubelight-nav{display:flex;align-items:center;gap:2px;position:relative;background:rgba(255,255,255,0.06);border:1px solid var(--border);backdrop-filter:blur(8px);padding:4px;border-radius:100px;overflow:visible;}
+.tl-bg-pill{position:absolute;background:rgba(227,27,35,0.18);border-radius:100px;transition:left .35s cubic-bezier(.34,1.56,.64,1),top .35s cubic-bezier(.34,1.56,.64,1),width .35s cubic-bezier(.34,1.56,.64,1),height .35s;z-index:0;pointer-events:none;}
+.tl-lamp-wrap{position:absolute;pointer-events:none;z-index:10;transition:left .35s cubic-bezier(.34,1.56,.64,1);width:0;height:0;}
+.tl-lamp-bar{position:absolute;bottom:100%;left:50%;transform:translateX(-50%);width:32px;height:4px;background:var(--red);border-radius:4px 4px 0 0;margin-bottom:2px;}
+.tl-lamp-bar::before{content:'';position:absolute;width:48px;height:24px;background:rgba(227,27,35,0.25);border-radius:50%;filter:blur(10px);top:-8px;left:-8px;}
+.tl-lamp-bar::after{content:'';position:absolute;width:32px;height:20px;background:rgba(227,27,35,0.2);border-radius:50%;filter:blur(8px);top:-4px;left:0;}
+.tl-lamp-glow3{position:absolute;width:16px;height:16px;background:rgba(227,27,35,0.15);border-radius:50%;filter:blur(4px);top:0;left:8px;}
+.tl-item{position:relative;z-index:1;cursor:pointer;font-size:0.82rem;font-weight:600;padding:8px 20px;border-radius:100px;transition:color .2s;color:var(--ink-light);text-decoration:none;white-space:nowrap;}
+.tl-item:hover{color:var(--ink);}
+.tl-item.active{color:var(--red);}
+.ham-btn{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:8px;z-index:300;}
+.ham-btn span{display:block;width:24px;height:2px;background:var(--ink);border-radius:2px;transition:transform .3s ease,opacity .3s ease;}
+.ham-btn.open span:nth-child(1){transform:translateY(7px) rotate(45deg);}
+.ham-btn.open span:nth-child(2){opacity:0;}
+.ham-btn.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg);}
+.mob-menu{display:none;position:fixed;inset:0;z-index:250;background:rgba(13,1,1,0.97);backdrop-filter:blur(20px);flex-direction:column;align-items:center;justify-content:center;opacity:0;transition:opacity .25s ease;pointer-events:none;}
+.mob-menu.open{opacity:1;pointer-events:all;}
+.mob-menu-inner{display:flex;flex-direction:column;align-items:center;gap:4px;}
+.mob-item{font-size:1.7rem;font-weight:600;color:var(--ink);padding:12px 32px;border-radius:100px;transition:color .2s;text-decoration:none;}
+.mob-item:hover{color:var(--red);}
+.mob-cta{margin-top:28px;background:var(--red);color:#fff;font-size:1rem;font-weight:600;padding:14px 36px;border-radius:100px;transition:background .2s;text-decoration:none;}
+
+/* HERO */
+.page-hero{min-height:72vh;padding-top:68px;position:relative;overflow:hidden;display:flex;align-items:center;}
+.page-hero-bg{position:absolute;inset:0;background-image:url('hero-slide.png');background-size:cover;background-position:center;}
+.page-hero-bg::after{content:'';position:absolute;inset:0;background:linear-gradient(135deg,rgba(0,0,0,0.82) 0%,rgba(0,0,0,0.35) 100%);}
+.page-hero-content{position:relative;z-index:2;padding:80px;max-width:860px;}
+.hero-breadcrumb{font-size:0.75rem;font-weight:600;color:rgba(255,255,255,0.45);letter-spacing:1px;text-transform:uppercase;margin-bottom:16px;}
+.hero-breadcrumb a{color:rgba(255,255,255,0.45);transition:color .2s;}
+.hero-breadcrumb a:hover{color:var(--red);}
+.hero-breadcrumb span{color:rgba(255,255,255,0.25);margin:0 8px;}
+.hero-tag{display:inline-block;background:var(--red);color:#fff;font-size:0.72rem;font-weight:600;letter-spacing:1px;padding:5px 14px;border-radius:100px;margin-bottom:20px;}
+.page-hero-content h1{font-family:var(--serif);font-size:clamp(2.4rem,4.5vw,4.2rem);font-weight:300;color:#fff;line-height:1.1;letter-spacing:-0.5px;margin-bottom:20px;}
+.page-hero-content h1 em{font-style:italic;color:rgba(255,255,255,0.65);}
+.page-hero-content p{font-size:1rem;color:rgba(255,255,255,0.72);max-width:520px;line-height:1.75;margin-bottom:32px;}
+.hero-btns{display:flex;gap:14px;flex-wrap:wrap;}
+.btn-primary{background:var(--red);color:#fff;font-size:0.9rem;font-weight:600;padding:14px 28px;border-radius:100px;transition:background .2s,transform .2s;}
+.btn-primary:hover{background:var(--red-mid);transform:translateY(-1px);}
+.btn-outline{background:rgba(255,255,255,0.1);border:1px solid rgba(255,255,255,0.3);color:#fff;font-size:0.9rem;font-weight:500;padding:14px 28px;border-radius:100px;backdrop-filter:blur(6px);transition:background .2s;}
+.btn-outline:hover{background:rgba(255,255,255,0.18);}
+
+/* TRUST BAR */
+.trust-bar{background:var(--mist);border-bottom:1px solid var(--border);padding:28px 0;}
+.trust-inner{max-width:1220px;margin:0 auto;padding:0 48px;display:flex;gap:48px;align-items:center;justify-content:center;flex-wrap:wrap;}
+.trust-item{display:flex;flex-direction:column;align-items:center;gap:4px;}
+.trust-num{font-family:var(--serif);font-size:1.8rem;font-weight:700;color:var(--red);line-height:1;}
+.trust-label{font-size:0.72rem;font-weight:600;letter-spacing:1px;text-transform:uppercase;color:var(--ink-light);}
+.trust-div{width:1px;height:40px;background:var(--border);}
+
+/* COMMONS */
+.wrap{max-width:1220px;margin:0 auto;padding:0 48px;}
+.section{padding:100px 0;}
+.label{font-size:0.75rem;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;color:var(--red);margin-bottom:16px;display:block;}
+.section-title{font-family:var(--serif);font-size:clamp(2rem,3.8vw,3.4rem);font-weight:400;line-height:1.15;letter-spacing:-0.3px;color:#fff;margin-bottom:16px;}
+.section-title em{font-style:italic;color:rgba(255,255,255,0.4);}
+.section-intro{font-size:1rem;color:var(--ink-light);max-width:580px;line-height:1.8;}
+
+/* LOCAL INTRO */
+.local-intro-grid{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center;margin-top:60px;}
+.local-intro-right p{color:var(--ink-light);line-height:1.85;margin-bottom:18px;font-size:0.97rem;}
+.local-intro-right p strong{color:var(--ink);}
+.local-checklist{display:flex;flex-direction:column;gap:12px;margin-top:24px;}
+.local-check{display:flex;gap:12px;align-items:flex-start;font-size:0.88rem;color:var(--ink-light);}
+.local-check::before{content:'';width:18px;height:18px;border-radius:50%;background:rgba(227,27,35,0.12);border:1px solid rgba(227,27,35,0.25);display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:2px;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='10' viewBox='0 0 10 10'%3E%3Cpath d='M2 5l2.5 2.5L8 3' stroke='%23E31B23' stroke-width='1.5' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:center;}
+
+/* TESTIMONIAL */
+.testi-section{background:var(--mist);}
+.testi-inner{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center;}
+.testi-quote-wrap{position:relative;}
+.testi-quote-mark{font-family:var(--serif);font-size:6rem;line-height:0.8;color:var(--red);opacity:0.2;position:absolute;top:-8px;left:-12px;pointer-events:none;}
+.testi-quote{font-family:var(--serif);font-size:1.25rem;font-weight:300;color:var(--ink);line-height:1.7;font-style:italic;position:relative;z-index:1;}
+.testi-meta{margin-top:28px;display:flex;align-items:center;gap:16px;}
+.testi-logo-wrap{background:#fff;border-radius:8px;padding:8px 14px;display:inline-flex;align-items:center;}
+.testi-logo-wrap img{height:34px;}
+.testi-name{font-size:0.88rem;font-weight:600;color:var(--ink);}
+.testi-role{font-size:0.78rem;color:var(--ink-light);margin-top:2px;}
+.testi-stars{font-size:0.85rem;color:var(--red);letter-spacing:2px;margin-bottom:6px;}
+.testi-right-label{font-size:0.75rem;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;color:var(--ink-light);margin-bottom:20px;display:block;}
+.testi-right h3{font-family:var(--serif);font-size:1.9rem;font-weight:400;color:#fff;line-height:1.2;margin-bottom:16px;}
+.testi-right h3 em{font-style:italic;color:rgba(255,255,255,0.45);}
+.testi-right p{color:var(--ink-light);font-size:0.92rem;line-height:1.8;margin-bottom:24px;}
+.testi-cta{display:inline-flex;align-items:center;gap:8px;font-size:0.85rem;font-weight:600;color:#fff;background:var(--red);padding:12px 24px;border-radius:100px;transition:background .2s;}
+.testi-cta:hover{background:var(--red-mid);}
+
+/* SERVICES */
+.srv-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;background:var(--border);margin-top:56px;}
+.srv-card{background:var(--white);padding:40px 36px;position:relative;overflow:hidden;transition:background .3s;display:flex;flex-direction:column;gap:14px;}
+.srv-card::after{content:'';position:absolute;bottom:0;left:0;right:0;height:3px;background:var(--red);transform:scaleX(0);transform-origin:left;transition:transform .3s;}
+.srv-card:hover{background:#200606;}
+.srv-card:hover::after{transform:scaleX(1);}
+.srv-badge{display:inline-block;background:rgba(227,27,35,0.08);color:var(--red);font-size:0.68rem;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;padding:4px 12px;border-radius:100px;border:1px solid rgba(227,27,35,0.15);width:fit-content;}
+.srv-icon{font-size:2rem;}
+.srv-card h3{font-family:var(--serif);font-size:1.4rem;font-weight:400;color:var(--ink);}
+.srv-card p{font-size:0.86rem;color:var(--ink-light);line-height:1.8;flex:1;}
+.srv-feats{display:flex;flex-direction:column;gap:7px;margin-top:6px;}
+.srv-feats li{font-size:0.81rem;color:var(--ink-light);display:flex;align-items:center;gap:10px;}
+.srv-feats li::before{content:'';width:14px;height:1.5px;background:var(--red);flex-shrink:0;}
+
+/* FAQ */
+.faq{background:#080101;padding:100px 0;border-top:1px solid var(--border);}
+.faq .wrap{padding-left:80px;padding-right:80px;}
+.faq-layout{display:grid;grid-template-columns:1fr 1.9fr;gap:80px;align-items:start;}
+.faq-left{position:sticky;top:100px;}
+.faq-eyebrow{display:inline-flex;align-items:center;gap:10px;font-size:0.72rem;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:var(--red);margin-bottom:20px;}
+.faq-eyebrow::before{content:'';display:inline-block;width:20px;height:2px;background:var(--red);flex-shrink:0;}
+.faq-title{font-family:var(--serif);font-size:clamp(1.8rem,3vw,2.8rem);font-weight:400;line-height:1.15;color:#fff;margin-bottom:16px;}
+.faq-title em{font-style:italic;color:rgba(255,255,255,0.35);}
+.faq-subtitle{font-size:0.86rem;line-height:1.8;color:var(--ink-light);margin-bottom:28px;}
+.faq-contact-cta{display:inline-flex;align-items:center;gap:8px;font-size:0.82rem;font-weight:600;color:var(--ink);background:rgba(227,27,35,0.1);border:1px solid rgba(227,27,35,0.22);padding:11px 22px;border-radius:100px;transition:background .2s,color .2s;}
+.faq-contact-cta:hover{background:var(--red);color:#fff;}
+.faq-list{display:flex;flex-direction:column;}
+.faq-item{border-bottom:1px solid var(--border);}
+.faq-item:first-child{border-top:1px solid var(--border);}
+.faq-btn{width:100%;display:flex;align-items:center;justify-content:space-between;gap:20px;padding:22px 0;background:none;border:none;cursor:pointer;text-align:left;color:var(--ink);transition:color .2s;}
+.faq-btn:hover{color:#fff;}
+.faq-btn.open{color:var(--red);}
+.faq-question{font-family:var(--serif);font-size:1rem;font-weight:400;line-height:1.35;}
+.faq-icon{flex-shrink:0;width:28px;height:28px;border-radius:50%;border:1px solid var(--border);display:flex;align-items:center;justify-content:center;transition:background .25s,border-color .25s,transform .4s cubic-bezier(.34,1.56,.64,1);}
+.faq-btn.open .faq-icon{background:var(--red);border-color:var(--red);transform:rotate(45deg);}
+.faq-icon svg{width:12px;height:12px;color:var(--ink-light);transition:color .25s;}
+.faq-btn.open .faq-icon svg{color:#fff;}
+.faq-body{display:grid;grid-template-rows:0fr;transition:grid-template-rows .38s ease;}
+.faq-body.open{grid-template-rows:1fr;}
+.faq-body-inner{overflow:hidden;}
+.faq-answer{font-size:0.87rem;line-height:1.85;color:var(--ink-light);padding-bottom:22px;max-width:560px;}
+.faq-answer a{color:var(--red);text-decoration:none;border-bottom:1px solid rgba(227,27,35,0.3);}
+.faq-answer a:hover{border-color:var(--red);}
+
+/* CTA BANNER */
+.cta-banner{background:#6b0f14;padding:90px 0;text-align:center;position:relative;overflow:hidden;}
+.cta-banner::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 60% 80% at 50% 50%,rgba(255,255,255,0.06) 0%,transparent 70%);}
+.cta-banner h2{font-family:var(--serif);font-size:clamp(2rem,4vw,3.6rem);font-weight:300;color:#fff;line-height:1.15;letter-spacing:-0.3px;margin-bottom:14px;position:relative;}
+.cta-banner h2 em{font-style:italic;color:rgba(255,255,255,0.6);}
+.cta-banner p{color:rgba(255,255,255,0.65);font-size:1rem;margin-bottom:32px;position:relative;}
+.btn-cta{background:#fff;color:var(--red);font-size:0.92rem;font-weight:700;padding:16px 36px;border-radius:100px;display:inline-block;transition:transform .2s,box-shadow .2s;position:relative;}
+.btn-cta:hover{transform:translateY(-2px);box-shadow:0 12px 36px rgba(0,0,0,0.25);}
+
+/* FOOTER */
+footer{background:#080101;color:rgba(255,255,255,0.5);padding:64px 48px 40px;}
+.footer-top{max-width:1220px;margin:0 auto;display:grid;grid-template-columns:1.5fr 1fr 1fr;gap:64px;padding-bottom:48px;border-bottom:1px solid rgba(255,255,255,0.08);}
+.footer-brand img{height:44px;margin-bottom:18px;}
+.footer-brand p{font-size:0.85rem;line-height:1.75;max-width:280px;}
+.footer-social{display:flex;gap:12px;margin-top:20px;}
+.footer-social a{width:44px;height:44px;border-radius:10px;border:1px solid rgba(255,255,255,0.2);background:rgba(255,255,255,0.06);display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,0.7);transition:border-color .2s,color .2s,background .2s;}
+.footer-social a:hover{border-color:var(--red);color:#fff;background:var(--red);}
+.footer-col h4{font-size:0.75rem;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:rgba(255,255,255,0.3);margin-bottom:16px;}
+.footer-col ul{list-style:none;display:flex;flex-direction:column;gap:10px;}
+.footer-col ul a{font-size:0.88rem;color:rgba(255,255,255,0.5);transition:color .2s;}
+.footer-col ul a:hover{color:#fff;}
+.footer-bottom{max-width:1220px;margin:32px auto 0;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;font-size:0.78rem;}
+.footer-bottom-links{display:flex;gap:20px;}
+.footer-bottom-links a{color:rgba(255,255,255,0.3);font-size:0.75rem;transition:color .2s;}
+.footer-bottom-links a:hover{color:rgba(255,255,255,0.7);}
+
+/* LOCATION LINKS */
+.location-links{background:var(--mist);border-top:1px solid var(--border);padding:40px 0;}
+.location-links-inner{max-width:1220px;margin:0 auto;padding:0 48px;}
+.location-links-inner p{font-size:0.8rem;color:var(--ink-light);margin-bottom:14px;}
+.loc-tags{display:flex;flex-wrap:wrap;gap:8px;}
+.loc-tag{font-size:0.78rem;color:var(--ink-light);border:1px solid var(--border);padding:5px 14px;border-radius:100px;transition:border-color .2s,color .2s;}
+.loc-tag:hover{border-color:var(--red);color:var(--ink);}
+
+/* ANIMATIONS */
+.fade-up{opacity:0;transform:translateY(28px);transition:opacity .7s ease,transform .7s ease;}
+.fade-up.visible{opacity:1;transform:translateY(0);}
+.fade-up-d1{transition-delay:.1s;} .fade-up-d2{transition-delay:.2s;} .fade-up-d3{transition-delay:.3s;}
+
+@media(max-width:980px){
+  nav{padding:0 20px;} .tubelight-nav{display:none;} .nav-cta{display:none;}
+  .ham-btn{display:flex;} .mob-menu{display:flex;}
+  .wrap{padding:0 24px;} .section{padding:72px 0;}
+  .page-hero-content{padding:48px 24px;}
+  .page-hero-content h1{font-size:clamp(2rem,7vw,2.8rem);}
+  .trust-inner{gap:24px;padding:0 24px;}
+  .trust-div{display:none;}
+  .local-intro-grid,.testi-inner,.footer-top{grid-template-columns:1fr;gap:40px;}
+  .srv-grid{grid-template-columns:1fr;}
+  .faq-layout{grid-template-columns:1fr;gap:40px;}
+  .faq-left{position:static;}
+  .faq .wrap{padding-left:24px;padding-right:24px;}
+  footer{padding:48px 24px 32px;}
+  .location-links-inner{padding:0 24px;}
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-logo"><img src="logo.png" alt="MartKam Digital"></div>
+  <div class="tubelight-nav" id="tlNav">
+    <div class="tl-bg-pill" id="tlBg"></div>
+    <div class="tl-lamp-wrap" id="tlLamp"><div class="tl-lamp-bar"><div class="tl-lamp-glow3"></div></div></div>
+    <a href="index.html" class="tl-item">Home</a>
+    <a href="about.html" class="tl-item">About Us</a>
+    <a href="services.html" class="tl-item">Services</a>
+    <a href="reviews.html" class="tl-item">Reviews</a>
+    <a href="index.html#contact" class="tl-item">Contact</a>
+  </div>
+  <a href="index.html#contact" class="nav-cta">Let's Talk</a>
+  <button class="ham-btn" id="hamBtn" aria-label="Open menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- MOBILE MENU -->
+<div class="mob-menu" id="mobMenu">
+  <div class="mob-menu-inner">
+    <a href="index.html" class="mob-item">Home</a>
+    <a href="about.html" class="mob-item">About Us</a>
+    <a href="services.html" class="mob-item">Services</a>
+    <a href="reviews.html" class="mob-item">Reviews</a>
+    <a href="index.html#contact" class="mob-item">Contact</a>
+    <a href="index.html#contact" class="mob-cta">Let's Talk</a>
+  </div>
+</div>
+
+<!-- HERO -->
+<section class="page-hero">
+  <div class="page-hero-bg"></div>
+  <div class="page-hero-content">
+    <div class="hero-breadcrumb">
+      <a href="index.html">MartKam Digital</a>
+      <span>›</span>
+      <a href="services.html">Services</a>
+      <span>›</span>
+      Web Design Epsom
+    </div>
+    <span class="hero-tag">Epsom, Surrey</span>
+    <h1>Web design for Epsom businesses —<br><em>websites that actually bring in customers</em></h1>
+    <p>Epsom is one of Surrey's most active market towns. We build fast, professional websites for Epsom businesses that rank on Google and convert local searches into real, paying customers.</p>
+    <div class="hero-btns">
+      <a href="index.html#contact" class="btn-primary">Get a Free Quote</a>
+      <a href="services.html" class="btn-outline">See What We Do</a>
+    </div>
+  </div>
+</section>
+
+<!-- TRUST BAR -->
+<div class="trust-bar">
+  <div class="trust-inner">
+    <div class="trust-item"><span class="trust-num">5★</span><span class="trust-label">Google Rated</span></div>
+    <div class="trust-div"></div>
+    <div class="trust-item"><span class="trust-num">2–4</span><span class="trust-label">Weeks to Launch</span></div>
+    <div class="trust-div"></div>
+    <div class="trust-item"><span class="trust-num">100%</span><span class="trust-label">Client Satisfaction</span></div>
+    <div class="trust-div"></div>
+    <div class="trust-item"><span class="trust-num">Free</span><span class="trust-label">Consultation</span></div>
+    <div class="trust-div"></div>
+    <div class="trust-item"><span class="trust-num">Local</span><span class="trust-label">Surrey Based</span></div>
+  </div>
+</div>
+
+<!-- LOCAL INTRO -->
+<section class="section" id="local">
+  <div class="wrap">
+    <div class="fade-up">
+      <span class="label">Web Design · Epsom</span>
+      <h2 class="section-title">Helping Epsom businesses<br><em>stand out online</em></h2>
+    </div>
+    <div class="local-intro-grid">
+      <div class="fade-up fade-up-d1">
+        <p>Epsom is one of Surrey's most vibrant market towns — home to a diverse mix of independent businesses, tradespeople, cleaning companies, hospitality venues, healthcare providers and professional services. From the high street to the residential streets around Epsom Downs, local businesses here are built on quality and community.</p>
+        <p>But in today's market, reputation alone isn't enough. <strong>When an Epsom resident needs a service, the first place they look is Google.</strong> Businesses that appear at the top of those results get the call — the ones that don't, don't.</p>
+        <p>We build websites specifically designed to help Epsom businesses rank for local searches and turn that visibility into a consistent stream of real enquiries.</p>
+      </div>
+      <div class="fade-up fade-up-d2">
+        <div class="local-checklist">
+          <div class="local-check">Custom website built around your Epsom business and goals</div>
+          <div class="local-check">Local SEO targeting Epsom, Ewell, Stoneleigh and surrounding areas</div>
+          <div class="local-check">Google Business Profile setup for Maps and local searches</div>
+          <div class="local-check">Mobile-first design — most local searches happen on phones</div>
+          <div class="local-check">Fast-loading pages that keep visitors on your site</div>
+          <div class="local-check">Clear calls-to-action that turn visitors into enquiries</div>
+          <div class="local-check">Full training included — you stay in control</div>
+          <div class="local-check">Ongoing support after launch — we're in your corner</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIAL -->
+<section class="section testi-section">
+  <div class="wrap">
+    <div class="testi-inner">
+      <div class="fade-up">
+        <span class="testi-right-label">Surrey · Case Study</span>
+        <h3>A local cleaning business that went<br><em>from invisible to found on Google</em></h3>
+        <p>St Paul's Cleaning Services had been operating across Surrey for years with no website and no online presence. New customers had no way to find them through search.</p>
+        <p>We built them a professional, locally-optimised website and set up their Google Business Profile. The result was a transformed online presence — with new customers finding them through Google searches that would previously have gone straight to a competitor.</p>
+        <a href="reviews.html" class="testi-cta">Read all client stories →</a>
+      </div>
+      <div class="fade-up fade-up-d2">
+        <div class="testi-quote-wrap">
+          <div class="testi-quote-mark">"</div>
+          <div class="testi-stars">★★★★★</div>
+          <p class="testi-quote">"MartKam Digital completely transformed our online presence. Our website looks professional and we're now showing up on Google when local customers search for cleaning services — the difference has been remarkable."</p>
+          <div class="testi-meta">
+            <div class="testi-logo-wrap">
+              <img src="StPauls-logo.png" alt="St Paul's Cleaning Services">
+            </div>
+            <div>
+              <div class="testi-name">Andreza</div>
+              <div class="testi-role">Director · St Paul's Cleaning Services · Surrey</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="section" style="background:var(--mist);">
+  <div class="wrap">
+    <div style="text-align:center;max-width:600px;margin:0 auto;" class="fade-up">
+      <span class="label">What We Do in Epsom</span>
+      <h2 class="section-title">Everything your Epsom business<br><em>needs to compete online</em></h2>
+    </div>
+    <div class="srv-grid">
+      <div class="srv-card fade-up">
+        <div class="srv-badge">Core Service</div>
+        <div class="srv-icon">🎨</div>
+        <h3>Website Design & Build</h3>
+        <p>A fully custom website built specifically for your Epsom business — not a template. Designed to look great on every device and built to convert visitors into real enquiries.</p>
+        <ul class="srv-feats">
+          <li>100% custom design — no templates</li>
+          <li>Mobile-first, fast-loading pages</li>
+          <li>Contact forms & booking integrations</li>
+          <li>Full training included at handover</li>
+        </ul>
+      </div>
+      <div class="srv-card fade-up fade-up-d1">
+        <div class="srv-badge">Core Service</div>
+        <div class="srv-icon">📍</div>
+        <h3>Local SEO & Google Business</h3>
+        <p>Get your business appearing when Epsom residents search for what you offer. We set up your Google Business Profile and build the local SEO foundations that drive enquiries.</p>
+        <ul class="srv-feats">
+          <li>Google Business Profile setup & optimisation</li>
+          <li>Local SEO targeting Epsom & Ewell searches</li>
+          <li>Google Maps visibility</li>
+          <li>Monthly performance reporting</li>
+        </ul>
+      </div>
+      <div class="srv-card fade-up fade-up-d2">
+        <div class="srv-badge">Core Service</div>
+        <div class="srv-icon">🌐</div>
+        <h3>Hosting & Ongoing Support</h3>
+        <p>We handle the technical side completely — hosting, domain, security, updates and maintenance — so you can focus on your business, not your website.</p>
+        <ul class="srv-feats">
+          <li>Managed hosting & domain setup</li>
+          <li>Free SSL & fast UK-based servers</li>
+          <li>Regular updates & maintenance</li>
+          <li>Priority support whenever you need it</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq" id="faq">
+  <div class="wrap">
+    <div class="faq-layout">
+      <div class="faq-left fade-up">
+        <span class="faq-eyebrow">FAQ</span>
+        <h2 class="faq-title">Common questions<br><em>from Epsom businesses</em></h2>
+        <p class="faq-subtitle">Something else on your mind? We love a straight-talking conversation — no obligation.</p>
+        <a href="index.html#contact" class="faq-contact-cta">Ask us anything →</a>
+      </div>
+      <div class="faq-list fade-up fade-up-d2">
+        <div class="faq-item">
+          <button class="faq-btn" aria-expanded="false">
+            <span class="faq-question">How much does a website cost for an Epsom business?</span>
+            <span class="faq-icon"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><line x1="6" y1="1" x2="6" y2="11"/><line x1="1" y1="6" x2="11" y2="6"/></svg></span>
+          </button>
+          <div class="faq-body"><div class="faq-body-inner">
+            <p class="faq-answer">Every project is different, but we always provide a clear, fixed quote before any work begins — no hidden costs, no surprises. <a href="index.html#contact">Get in touch for a free, no-obligation quote.</a></p>
+          </div></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-btn" aria-expanded="false">
+            <span class="faq-question">Can you help my Epsom business rank on Google?</span>
+            <span class="faq-icon"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><line x1="6" y1="1" x2="6" y2="11"/><line x1="1" y1="6" x2="11" y2="6"/></svg></span>
+          </button>
+          <div class="faq-body"><div class="faq-body-inner">
+            <p class="faq-answer">Yes — local SEO is built into every website we create. We target the exact search terms Epsom residents use, set up your Google Business Profile, and build the on-page foundations that help you rank. SEO takes time, but the groundwork is laid from day one.</p>
+          </div></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-btn" aria-expanded="false">
+            <span class="faq-question">How long does it take to build and launch?</span>
+            <span class="faq-icon"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><line x1="6" y1="1" x2="6" y2="11"/><line x1="1" y1="6" x2="11" y2="6"/></svg></span>
+          </button>
+          <div class="faq-body"><div class="faq-body-inner">
+            <p class="faq-answer">Most projects go from first conversation to live website within 2–4 weeks. We keep you involved throughout, so you'll always know where things stand — no disappearing acts.</p>
+          </div></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-btn" aria-expanded="false">
+            <span class="faq-question">Do you also cover Ewell, Stoneleigh and areas near Epsom?</span>
+            <span class="faq-icon"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><line x1="6" y1="1" x2="6" y2="11"/><line x1="1" y1="6" x2="11" y2="6"/></svg></span>
+          </button>
+          <div class="faq-body"><div class="faq-body-inner">
+            <p class="faq-answer">Yes — we serve all of the Epsom area including Ewell, Stoneleigh, Tadworth, Chessington, Surbiton and across Surrey and South West London. We also work remotely with businesses anywhere in the UK.</p>
+          </div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-banner">
+  <h2>Ready to grow your<br><em>Epsom business online?</em></h2>
+  <p>Free consultation · No obligation · Based in Surrey</p>
+  <a href="index.html#contact" class="btn-cta">Get Your Free Quote Today</a>
+</section>
+
+<!-- LOCATION LINKS -->
+<div class="location-links">
+  <div class="location-links-inner">
+    <p>We also provide web design services across:</p>
+    <div class="loc-tags">
+      <a href="web-design-cheam.html" class="loc-tag">Web Design Cheam</a>
+      <a href="web-design-sutton.html" class="loc-tag">Web Design Sutton</a>
+      <a href="index.html#areas" class="loc-tag">Web Design Wimbledon</a>
+      <a href="index.html#areas" class="loc-tag">Web Design Kingston</a>
+      <a href="index.html#areas" class="loc-tag">Web Design Guildford</a>
+      <a href="index.html#areas" class="loc-tag">Web Design Woking</a>
+      <a href="index.html#areas" class="loc-tag">Web Design Ewell</a>
+      <a href="index.html#areas" class="loc-tag">Web Design Leatherhead</a>
+      <a href="index.html#areas" class="loc-tag">Web Design Surrey</a>
+    </div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-top">
+    <div class="footer-brand">
+      <img src="logo.png" alt="MartKam Digital">
+      <p>Web design, SEO and digital services for local businesses across Surrey and South West London.</p>
+      <div class="footer-social">
+        <a href="https://www.facebook.com/share/1HmyjG7r2K/?mibextid=wwXIfr" target="_blank" rel="noopener" aria-label="Facebook">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+        </a>
+        <a href="#" aria-label="Instagram">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+        </a>
+        <a href="https://share.google/xvQ0x2yGNj0gT0dC1" target="_blank" rel="noopener" aria-label="Google Business Profile">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg>
+        </a>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h4>Services</h4>
+      <ul>
+        <li><a href="services.html">Website Design & Build</a></li>
+        <li><a href="services.html">SEO & Google Rankings</a></li>
+        <li><a href="services.html">Google Business Profile</a></li>
+        <li><a href="services.html">IT Troubleshooting</a></li>
+        <li><a href="services.html">Hosting & Domains</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Areas We Serve</h4>
+      <ul>
+        <li><a href="web-design-epsom.html">Web Design Epsom</a></li>
+        <li><a href="web-design-cheam.html">Web Design Cheam</a></li>
+        <li><a href="web-design-sutton.html">Web Design Sutton</a></li>
+        <li><a href="index.html#areas">Wimbledon & Kingston</a></li>
+        <li><a href="index.html#areas">Guildford & Woking</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2025 MartKam Digital Ltd. Web Design & SEO · Surrey & South West London.</span>
+    <div class="footer-bottom-links">
+      <a href="#">Privacy Policy</a>
+      <a href="#">Terms & Conditions</a>
+      <a href="#">Cookie Policy</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+}, { threshold: 0.1 });
+document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+const tlNav = document.getElementById('tlNav');
+const tlBg  = document.getElementById('tlBg');
+const tlLamp = document.getElementById('tlLamp');
+const tlItems = document.querySelectorAll('.tl-item');
+function movePill(el) {
+  const nr = tlNav.getBoundingClientRect(), er = el.getBoundingClientRect();
+  tlBg.style.cssText = `left:${er.left-nr.left}px;top:${er.top-nr.top}px;width:${er.width}px;height:${er.height}px;`;
+  tlLamp.style.cssText = `left:${er.left-nr.left+er.width/2}px;top:${er.top-nr.top}px;`;
+}
+const activeItem = tlNav.querySelector('.tl-item.active');
+if (activeItem) requestAnimationFrame(() => movePill(activeItem));
+tlItems.forEach(item => {
+  item.addEventListener('mouseenter', () => movePill(item));
+  item.addEventListener('mouseleave', () => { const a = tlNav.querySelector('.tl-item.active'); if (a) movePill(a); });
+});
+const hamBtn = document.getElementById('hamBtn');
+const mobMenu = document.getElementById('mobMenu');
+hamBtn.addEventListener('click', () => { hamBtn.classList.toggle('open'); mobMenu.classList.toggle('open'); });
+document.querySelectorAll('.mob-item, .mob-cta').forEach(item => {
+  item.addEventListener('click', () => { hamBtn.classList.remove('open'); mobMenu.classList.remove('open'); });
+});
+document.querySelectorAll('.faq-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const item = btn.closest('.faq-item'), body = item.querySelector('.faq-body');
+    const isOpen = btn.classList.contains('open');
+    document.querySelectorAll('.faq-btn.open').forEach(b => {
+      b.classList.remove('open'); b.setAttribute('aria-expanded','false');
+      b.closest('.faq-item').querySelector('.faq-body').classList.remove('open');
+    });
+    if (!isOpen) { btn.classList.add('open'); btn.setAttribute('aria-expanded','true'); body.classList.add('open'); }
+  });
+});
+</script>
+</body>
+</html>
